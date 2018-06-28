@@ -62,9 +62,14 @@ function errorHandler(statusCode){   //Show  'jokeContainer' section background 
 	document.getElementById('jokeContainer').element.style.backgroundColor = "red";
 }
 
+function searchJavascript(){ //Get javasript repositories from renderGitHub API.
+    let url = "https://api.github.com/search/repositories?q=php";
+    makeAjaxCall(url,"GET").then(generate_table,errorHandler);
+	}
+
 function search(){    //Get data from github repositories API so the user can perform search for any repository.
     let search = document.getElementById("Search");
-    let url = "https://api.github.com/search/repositories?q=javascript";
+    let url = "https://api.github.com/search/repositories";
     url += "?q="+ search.value;
 
     makeAjaxCall(url,"GET").then(renderGitHub,errorHandler);
@@ -77,4 +82,29 @@ function renderGitHub(gitData){ //Send data from github repositories API to HTML
     repoName.innerHTML = repo.full_name;
     list.appendChild(repoName);
   }
+}
+
+// I had problems iterating the for.
+function generate_table(tableData) {
+  // get the reference for the body
+  let matrix = document.getElementById("matrix");
+  // creates a <table> element and a <tbody> element
+  var tbl = document.createElement("table");
+  let tblBody = document.createElement("tbody");
+  for (let repo of tableData.items){
+    var row = document.createElement("tr");
+    let cell = document.createElement("td");
+    let cellText = document.createTextNode(repo.full_name + " | " + repo.owner.html_url );
+    cell.appendChild(cellText);
+    row.appendChild(cell);
+  }
+    tblBody.appendChild(row);
+    // put the <tbody> in the <table>
+    tbl.appendChild(tblBody);
+    // appends <table> into <body>
+    matrix.appendChild(tbl);
+    // sets the border attribute of tbl to 2;
+  tbl.setAttribute("border", "2");
+
+
 }
