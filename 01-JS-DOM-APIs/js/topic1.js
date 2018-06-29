@@ -97,8 +97,9 @@ function generate_table(tableData) {
     let cellText = document.createTextNode(repo.full_name + " | " + repo.owner.html_url );
     cell.appendChild(cellText);
     row.appendChild(cell);
-  }
     tblBody.appendChild(row);
+  }
+
     // put the <tbody> in the <table>
     tbl.appendChild(tblBody);
     // appends <table> into <body>
