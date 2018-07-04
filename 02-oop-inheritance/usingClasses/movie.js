@@ -69,10 +69,19 @@ let social = {  // src : https://www.w3schools.com/js/js_objects.asp
   }
 };
 
+class Actor{
+  constructor(name,age){
+    this.name = name;
+    this.age = age;
+  }
+};
+
 let pulpFiction = new Movie('Pulp Fiction', 1994, 154);
 
 Object.assign(pulpFiction,social); //  src: https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/assign
 let logger = new Logger();
+
+let newActor = new Actor('Samuel L. Jackson', 69 );
 
 
 pulpFiction.on('play',logger.log);
