@@ -37,6 +37,7 @@ class Movie extends EventEmmiter {
     this.title = title,
     this.year = year,
     this.duration = duration
+    this.cast = [];
   }
 
 
@@ -50,6 +51,16 @@ class Movie extends EventEmmiter {
 
   resume(){
     this.emit('resume');
+  }
+
+  addCast(actor){ //src: https://stackoverflow.com/questions/4775722/check-if-object-is-array
+    if(Array.isArray(actor)) //check if is an array of actors
+    {
+      this.cast = this.cast.concat(actor);
+    }
+    else{
+      this.cast.push(actor);
+    }
   }
 
 }
@@ -94,3 +105,14 @@ pulpFiction.pause();
 
 pulpFiction.share('Samuel L. Jackson'); // output: Share Pulp Fiction with Samuel L. Jackson.
 pulpFiction.like('Samuel L. Jackson');  // output: Samuel L. Jackson likes Pulp Fiction with .
+pulpFiction.addCast(newActor);
+let otherCast = [
+  new Actor('Paul Winfield', 50),
+  new Actor('Michael Biehn', 50),
+  new Actor('Linda Hamilton', 50)
+];
+pulpFiction.addCast(otherCast);
+
+console.log(pulpFiction.cast[0].name);
+
+console.log(pulpFiction.cast[3].name + pulpFiction.cast[3].age );
