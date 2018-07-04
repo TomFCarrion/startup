@@ -1,5 +1,4 @@
 
-
 function Movie (title, year, duration){
   this.title = title,
   this.year = year,
