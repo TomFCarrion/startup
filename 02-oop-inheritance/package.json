@@ -1,0 +1,12 @@
+{
+  "name": "02-oop-inheritance",
+  "version": "1.0.0",
+  "description": "Topic 2 ",
+  "main": "index.js",
+  "scripts": {},
+  "author": "Tomas F. Carrion",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0"
+  }
+}
