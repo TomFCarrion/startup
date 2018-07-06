@@ -8,4 +8,4 @@ let social = {  // src : https://www.w3schools.com/js/js_objects.asp
   }
 };
 
-export default social;
+// export default social;

@@ -3,4 +3,4 @@ class Logger{
     console.log('The '+ info +' event has been emited');
   }
 }
-export default Logger;
+// export default Logger;

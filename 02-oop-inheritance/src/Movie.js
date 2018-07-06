@@ -1,5 +1,3 @@
-import EventEmitter from "./EventEmitter.js";
-
 class Movie extends EventEmmiter {
   constructor(title, year, duration) {
     super();
@@ -34,4 +32,4 @@ class Movie extends EventEmmiter {
 
 }
 
-export default Movie;
+// export default Movie;

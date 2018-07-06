@@ -1,7 +1,4 @@
-import Actor from 'src/Actor.js'
-import Movie from 'src/Movie.js';
-import Logger from 'src/Logger.js';
-import Social from 'src/Social.js';
+
 
 let pulpFiction = new Movie('Pulp Fiction', 1994, 154);
 

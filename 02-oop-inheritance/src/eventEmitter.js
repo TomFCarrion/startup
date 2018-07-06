@@ -29,4 +29,3 @@ class EventEmmiter {
     }
   }
   }
-export default EventEmmiter;
