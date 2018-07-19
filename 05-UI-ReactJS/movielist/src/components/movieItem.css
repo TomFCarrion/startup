@@ -1,0 +1,30 @@
+.movieWrapper{
+  border-bottom: 1px solid black;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.removeMovie{
+  outline:none;
+  margin-left: 5px;
+  padding:0.7em 1.4em;
+  margin:0 0.3em 0.3em 0;
+  border-radius:0.15em;
+  box-sizing: border-box;
+  border: none;
+  padding: 8px;
+  outline:none;
+  color: #2274A5;
+  color:#FFFFFF;
+  background-color: #3369ff;
+  box-shadow:inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17);
+}
+
+.removeMovie:hover{
+  background-color: red;
+
+}
+
+.removeMovie:active{
+  transform: translateY(2px);
+}
