@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Topic 1</title>
+	<link href="https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Expanded:500" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<script type="text/javascript" src="js/topic1.js"></script>
+</head>
+<body onload="fadeInOnLoad()">
+
+	<section>
+		<h1>Topic 1: JavaScript, and DOM APIs</h1>
+		<div>
+			<p>
+				 Lorem ipsum dolor sit amet consectetur adipiscing elit purus a parturient pretium,
+				 fusce in tincidunt augue malesuada aliquet morbi pulvinar dictum vel ligula,
+				 feugiat blandit curabitur posuere accumsan felis rutrum placerat euismod pharetra.
+				 Tincidunt orci diam auctor aptent velit parturient ornare in, pharetra eleifend vehicula lacinia litora vel magnis aliquam,
+				 sagittis natoque dictumst dictum quisque himenaeos mi. Ultricies tempor sociosqu viverra litora consequat suspendisse dis aliquet dui et netus lacus,
+				 laoreet lacinia ridiculus vitae fhimenaeos scelerisque blandit ornare varius taciti.
+			</p>
+		</div>
+	</section>
+	<section>
+		<p>"Helo world must fade in on load..."</p>
+		<h1 class="hidden" id="hide"> Hello World! </h1>
+	</section>
+	<section id="jokeContainer">
+		<button onclick="getJokePromise()" name="button"> Click here for some Chuck Norris jokes </button>
+		<div id="joke">
+			<!-- the joke will display here -->
+		</div>
+	</section>
+	<section class="github-container">
+			<h3>Github search engine</h3>
+			<input type="text" name="github" placeholder="input a repositorie" id="Search"> <br> <br>
+			<button onclick="search()">Search on Git</button>
+	</section>
+		<section class="list-container" >
+			<ul id=list>
+				<!-- Search results will display here -->
+			</ul>
+		</section>
+		<section>
+			<matrix id="matrix">
+				<button type="text" onclick="searchJavascript()">Generate a table.</button>
+			</matrix>
+		</section>
+
+</body>
+</html>
